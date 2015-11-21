@@ -210,15 +210,47 @@ public class Sorts {
  //--------------------QuickSort-----------------
    
    public static void useAll(int[] data){//USa Todos
-	   System.out.println("Arreglo Desordenado : "+Arrays.toString(data)+"\n\n");
-	   System.out.println("1.-Burbuja->		"+Arrays.toString(burbuja(data))+"\n");
-	   System.out.println("2.-Inserción->		"+Arrays.toString(insercion(data))+"\n");
-	   System.out.println("3.-Seleccion->		"+Arrays.toString(seleccion(data))+"\n");
-	   System.out.println("4.-Cuentas->		"+Arrays.toString(cuentas(data))+"\n");
-	   System.out.println("5.-Shell->		"+Arrays.toString(shell(data))+"\n");
-	   System.out.println("6.-Radix->		"+Arrays.toString(radix(data))+"\n");
-	   System.out.println("7.-Mezcla->		"+Arrays.toString(mezcla(data))+"\n");
-	   System.out.println("8.-QuickSort->		"+Arrays.toString(quickSort(data))+"\n");
+	   System.out.println("Arreglo Desordenado :	"+Arrays.toString(data)+"\n");
+       long startTime = System.nanoTime();
+       
+       System.out.println("1.-Burbuja->		"+Arrays.toString(burbuja(data)));
+       long time = System.nanoTime() - startTime;
+       System.out.println("Tiempo: "+time+" Nanoseg...\n");   
+       
+       startTime = System.nanoTime();
+       System.out.println("2.-Inserción->		"+Arrays.toString(insercion(data)));
+       time = System.nanoTime() - startTime;
+       System.out.println("Tiempo: "+time+" Nanoseg...\n");
+       
+       startTime = System.nanoTime();
+       System.out.println("3.-Selección->		"+Arrays.toString(seleccion(data)));
+       time = System.nanoTime() - startTime;
+       System.out.println("Tiempo: "+time+" Nanoseg...\n");
+       
+       startTime = System.nanoTime();
+       System.out.println("4.-Cuentas->		"+Arrays.toString(cuentas(data)));
+       time = System.nanoTime() - startTime;
+       System.out.println("Tiempo: "+time+" Nanoseg...\n");
+       
+       startTime = System.nanoTime();
+       System.out.println("5.-Shell->		"+Arrays.toString(shell(data)));
+       time = System.nanoTime() - startTime;
+       System.out.println("Tiempo: "+time+" Nanoseg...\n");
+       
+       startTime = System.nanoTime();
+       System.out.println("6.-Radix->		"+Arrays.toString(radix(data)));
+       time = System.nanoTime() - startTime;
+       System.out.println("Tiempo: "+time+" Nanoseg...\n");
+       
+       startTime = System.nanoTime();
+       System.out.println("7.-Mezcla->		"+Arrays.toString(mezcla(data)));
+       time = System.nanoTime() - startTime;
+       System.out.println("Tiempo: "+time+" Nanoseg...\n");
+       
+       startTime = System.nanoTime();
+       System.out.println("8.-QuickSort->		"+Arrays.toString(quickSort(data)));
+       time = System.nanoTime() - startTime;
+       System.out.println("Tiempo: "+time+" Nanoseg...\n");
    }
    
 }

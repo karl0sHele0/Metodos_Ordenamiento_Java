@@ -4,16 +4,13 @@ import java.util.Arrays;
 import java.util.Random;
 import java.util.Scanner;
 
-import All.Sorts;
-
 public class Main {
 	static Scanner leer=new Scanner(System.in);
 	static int[] lista;
 	
 	public static void main(String[] args){
 		menuStart();
-	}	
-	
+	}		
 	private static void menuStart(){
 		System.out.print("Algoritmos de Ordenamiento");
 		System.out.println("\n1.-Iniciar\n2.-Salir");
@@ -43,55 +40,70 @@ public class Main {
 		
 		int opc=leer.nextInt();
 		switch(opc){
-			case 1:
-				System.out.println("Ordenamiento por 'BURBUJA'->: ");
-				System.out.println(Arrays.toString(Sorts.burbuja(arreglo))+"\n");
+			case 1:long startTime = System.nanoTime();
+				System.out.println("1.-Ordenamiento por Burbuja-> "+Arrays.toString(Sorts.burbuja(arreglo)));
+				long time = System.nanoTime() - startTime;
+				System.out.println("Tiempo: "+time+" Nanoseg...\n");                        
 				menuSorts(arreglo);
-				break;	
+				break; 
 			case 2:
-				System.out.println("Ordenamiento por 'INSERCIÓN'->: ");
-				System.out.println(Arrays.toString(Sorts.insercion(arreglo))+"\n");
+		        startTime = System.nanoTime();
+				System.out.println("2.-Ordenamiento por Inserción-> "+Arrays.toString(Sorts.insercion(arreglo)));
+				time = System.nanoTime() - startTime;
+				System.out.println("Tiempo: "+time+" Nanoseg...\n"); 
 				menuSorts(arreglo);
 				break;
 			case 3:
-				System.out.println("Ordenamiento por 'SELECCIÓN'->: ");
-				System.out.println(Arrays.toString(Sorts.seleccion(arreglo))+"\n");
-				menuSorts(arreglo);
-				break;
-			case 4://Cuentas
-				System.out.println("Ordenamiento por 'CUENTAS'->: ");
-				System.out.println(Arrays.toString(Sorts.cuentas(arreglo))+"\n");
-				menuSorts(arreglo);
-				break;
-			case 5://Shell
-				System.out.println("Ordenamiento por 'SHELL'->: ");
-				System.out.println(Arrays.toString(Sorts.shell(arreglo))+"\n");
-				menuSorts(arreglo);
-				break;
-			case 6:
-				System.out.println("Ordenamiento por 'RADIX'->: ");
-				System.out.println(Arrays.toString(Sorts.radix(arreglo))+"\n");
-				menuSorts(arreglo);
-				break;
-			case 7:
-				System.out.println("Ordenamiento por 'MEZCLA'->: ");
-				System.out.println(Arrays.toString(Sorts.mezcla(arreglo))+"\n");
-				menuSorts(arreglo);
-				break;
-			case 8:
-				System.out.println("Ordenamiento por 'QUICKSORT'->: ");
-				System.out.println(Arrays.toString(Sorts.quickSort(arreglo))+"\n");
-				menuSorts(arreglo);
-				break;
-			case 9:
-				Sorts.useAll(arreglo);
-				menuStart();
-				break;
-			case 10:
-				menuStart();
-				break;
-			default:
-				break;
+		        startTime = System.nanoTime();
+		        System.out.println("3.-Ordenamiento por Selección-> "+Arrays.toString(Sorts.seleccion(arreglo)));
+		        time = System.nanoTime() - startTime;
+		        System.out.println("Tiempo: "+time+" Nanoseg...\n"); 
+		        menuSorts(arreglo);
+		        break;
+			case 4:
+		        startTime = System.nanoTime();
+		        System.out.println("4.-Ordenamiento por Cuentas-> "+Arrays.toString(Sorts.cuentas(arreglo)));
+		        time = System.nanoTime() - startTime;
+		        System.out.println("Tiempo: "+time+" Nanoseg...\n"); 
+		        menuSorts(arreglo);
+		        break;
+		case 5://Shell
+		        startTime = System.nanoTime();
+		        System.out.println("5.-Ordenamiento por Shell-> "+Arrays.toString(Sorts.shell(arreglo)));
+		        time = System.nanoTime() - startTime;
+		        System.out.println("Tiempo: "+time+" Nanoseg...\n"); 
+		        menuSorts(arreglo);
+		        break;
+		case 6:
+		       startTime = System.nanoTime();
+		       System.out.println("6.-Ordenamiento por Radix-> "+Arrays.toString(Sorts.radix(arreglo)));
+		       time = System.nanoTime() - startTime;
+		       System.out.println("Tiempo: "+time+" Nanoseg...\n"); 
+		       menuSorts(arreglo);
+		       break;
+		case 7:
+		       startTime = System.nanoTime();
+		       System.out.println("7.-Ordenamiento por Mezcla-> "+Arrays.toString(Sorts.mezcla(arreglo)));
+		       time = System.nanoTime() - startTime;
+		       System.out.println("Tiempo: "+time+" Nanoseg...\n"); 
+		       menuSorts(arreglo);
+		       break;
+		case 8:
+		       startTime = System.nanoTime();
+		       System.out.println("8.-Ordenamiento por Quicksort-> "+Arrays.toString(Sorts.quickSort(arreglo)));
+		       time = System.nanoTime() - startTime;
+		       System.out.println("Tiempo: "+time+" Nanoseg...\n"); 
+		       menuSorts(arreglo);
+		       break;
+		case 9:
+			   Sorts.useAll(arreglo);
+			   menuStart();
+			   break;
+		case 10:
+			   menuStart();
+			   break;
+		default:
+			break;
 		}
 	}
 	public static int[] genArr(int cant){//Crea un arreglo Random
